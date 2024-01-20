@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Restaurant>
+
+@{
+    ViewData["Title"] = "Chicken Restaurants List";
+}
+
+<h1>Chicken Restaurants List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RestaurantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestaurantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Branches)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sales)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Region)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿@model Restaurant
+
+@{
+    ViewData["Title"] = "Add Restaurant";
+}
+<h2>Add Restaurant</h2>
+
+<form method="post" action="Add_CRList" class="mb-5">
+    <div class="mb-3">
+        <label for="ex" class="form-label">Restaurant Id</label>
+        <input type="number" style="width: 200px;" class="form-control" asp-for="RestaurantId">
+    </div>
+    <div class="mb-3">
+        <label for="ex" class="form-label">Restaurant Name</label>
+        <input type="text" style="width: 200px;" class="form-control" asp-for="RestaurantName">
+    </div>
+    <div class="mb-3">
+        <label for="ex" class="form-label">Country</label>
+        <input type="text" style="width: 200px;" class="form-control" asp-for="Country">
+    </div>
+    <div class="mb-3">
+        <label for="ex" class="form-label">Branches</label>
+        <input type="number" style="width: 200px;" class="form-control" asp-for="Branches">
+    </div>
+    <div class="mb-3">
+        <label for="ex" class="form-label">Sales</label>
+        <input type="number" style="width: 200px;" class="form-control" asp-for="Sales">
+    </div>
+    <div class="mb-3">
+    <label for="ex" class="form-label">Region</label>
+    <select class="form-control" style="width: 200px;" asp-for="Region">
+            <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Aurope">Europe</option>
+            <option value="Australia">Australia</option>
+    </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
